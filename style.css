@@ -1,19 +1,19 @@
-/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend+Exa&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend+Exa&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lexend Exa", sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #03071e;
     color: #333;
 }
 
-/* Header and Navigation styles */
 header {
     background-color: #333;
     padding: 10px 0;
@@ -40,32 +40,38 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Layout with sidebar and body */
+.Main_Title {
+    font-family: 'Tourney';
+    font-size: 4rem;
+    
+    color: white;
+    text-align: center;
+}
+
 .layout {
     display: grid;
     grid-template-areas:
         "sidebar body";
     grid-template-columns: auto 1fr;
-    height: 100vh; /* Full height to ensure the layout stretches */
+    height: 100vh;
 }
 
-/* Sidebar styles */
 .sidebar {
     grid-area: sidebar;
     background-color: #333;
     padding: 20px;
-    height: 100%; /* Make the sidebar extend down */
+    height: 100%;
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    flex-direction: column; /* Stack links vertically */
+    justify-content: flex-start;
+    flex-direction: column; 
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    gap: 10px; /* Space out the links */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sidebar ul li {
@@ -88,35 +94,189 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-/* Body styles */
-.body {
-    grid-area: body;
-    padding: 20px;
-}
-
+/*Divs*/
 .hero {
-    background-color: #0073e6;
     color: white;
-    text-align: center;
-    padding: 50px 20px;
+    text-align: left;
+    width:60%;
+    margin:auto;
+    display: flex;
+    gap: 10px;
+
+    position: relative;
+}
+.hero h2 {
+    font-family: 'Tourney';
+}
+.hero ul{
+  margin-left: 40px;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.maincontainer {
+  flex-grow: 1; 
+}
+.sidecontainer {
+  flex: 0 0 25%;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.sectionborder{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: double;
+    border-color: #222639;
+    margin-bottom: 10px;
+}
+.sectionborder nav ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0; 
+}
+.sectionborder li a{
+  text-decoration: none;
+}
+.sectionborder li a:hover {
+    color: #FFBA08;
+}
+.sectionborder ul li{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.sectionborder p{
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+/* Flicker and Text Shadow Effect gathered from https://aleclownes.com/2017/02/01/crt-display.html */
+@keyframes flickerText { 
+  0% {
+    opacity: 0.27861;
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5),
+                 -0.4389924193300864px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  5% {
+    opacity: 0.34769;
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5),
+                 -2.7928974010788217px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  10% {
+    opacity: 0.23604;
+    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5),
+                 -0.02956275843481219px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  15% {
+    opacity: 0.90626;
+    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5),
+                 -0.40218538552878136px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  20% {
+    opacity: 0.18128;
+    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5),
+                 -3.4794037899852017px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  25% {
+    opacity: 0.83891;
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5),
+                 -1.6125630401149584px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  30% {
+    opacity: 0.65583;
+    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5),
+                 -0.7015590085143956px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  35% {
+    opacity: 0.67807;
+    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5),
+                 -3.896914047650351px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  40% {
+    opacity: 0.26559;
+    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5),
+                 -3.870905614848819px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  45% {
+    opacity: 0.84693;
+    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5),
+                 -2.231056963361899px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  50% {
+    opacity: 0.96019;
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5),
+                 -0.08084290417898504px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  55% {
+    opacity: 0.08594;
+    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5),
+                 -2.3758461067427543px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  60% {
+    opacity: 0.20313;
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5),
+                 -2.202193051050636px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  65% {
+    opacity: 0.71988;
+    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5),
+                 -2.8638780614874975px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  70% {
+    opacity: 0.53455;
+    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5),
+                 -0.48874025155497314px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  75% {
+    opacity: 0.37288;
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5),
+                 -1.8948491305757957px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  80% {
+    opacity: 0.71428;
+    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5),
+                 -0.0833037308038857px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  85% {
+    opacity: 0.70419;
+    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5),
+                 -0.09769827255241735px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  90% {
+    opacity: 0.7003;
+    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5),
+                 -3.443339761481782px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  95% {
+    opacity: 0.36108;
+    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5),
+                 -2.1841838852799786px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+  100% {
+    opacity: 0.24387;
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5),
+                 -2.6208764473832513px 0 1px rgba(255,0,80,0.3),
+                 0 0 3px;
+  }
+} 
+.glitch {
+  animation: flickerText 2s infinite;
 }
