@@ -1,282 +1,464 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend+Exa&display=swap" rel="stylesheet');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend+Exa&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+/* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend+Exa&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* =========================
+   RESET & BASE STYLES
+========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-    font-family: "Lexend Exa", sans-serif;
-    line-height: 1.6;
-    background-color: #03071e;
-    color: #333;
+  font-family: "Lexend Exa", sans-serif;
+  line-height: 1.6;
+  background-color: #03071e;
+  color: #333;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 header {
-    background-color: #333;
-    padding: 10px 0;
+  background-color: #333;
+  padding: 10px 0;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+  color: #f4f4f4;
+  text-decoration: underline;
 }
 
+
+/* =========================
+   TITLES & TYPOGRAPHY
+========================= */
 .Main_Title {
-    font-family: 'Tourney';
-    font-size: 4rem;
-    
-    color: white;
-    text-align: center;
+  font-family: 'Tourney', sans-serif;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
 }
 
+
+/* =========================
+   MAIN LAYOUT
+========================= */
 .layout {
-    display: grid;
-    grid-template-areas:
-        "sidebar body";
-    grid-template-columns: auto 1fr;
-    height: 100vh;
+  display: grid;
+  grid-template-areas: "sidebar body";
+  grid-template-columns: auto 1fr;
+  height: 100vh;
 }
 
+
+/* =========================
+   SIDEBAR
+========================= */
 .sidebar {
-    grid-area: sidebar;
-    background-color: #333;
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column; 
+  grid-area: sidebar;
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
-    background-color: #444;
-    border-radius: 5px;
-    display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  display: block;
 }
 
 .sidebar ul li a:hover {
-    color: #f4f4f4;
-    background-color: #666;
-    text-decoration: none;
+  color: #f4f4f4;
+  background-color: #666;
 }
 
-/*Divs*/
+
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
-    color: white;
-    text-align: left;
-    width:60%;
-    margin:auto;
-    display: flex;
-    gap: 10px;
+  color: white;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  position: relative;
 
-    position: relative;
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
+
 .hero h2 {
-    font-family: 'Tourney';
+  font-family: 'Tourney', sans-serif;
 }
-.hero ul{
+
+.hero ul {
   margin-left: 40px;
 }
 
+
+/* =========================
+   CONTENT CONTAINERS
+========================= */
 .maincontainer {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
+
 .sidecontainer {
   flex: 0 0 25%;
+} 
+.sidecontainer div ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-.sectionborder{
-    padding: 10px 20px;
-    border-radius: 15px;
-    border-width: 3px;
-    border-style: double;
-    border-color: #222639;
-    margin-bottom: 10px;
+
+/* =========================
+   SECTION BORDERS
+========================= */
+.sectionborder {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 3px double #222639;
+  margin-bottom: 10px;
 }
-.sectionborder nav ul{
-  display: flex;
+
+.sectionborder nav ul {
   flex-direction: column;
-  padding: 0;
-  margin: 0; 
 }
-.sectionborder li a{
+
+.sectionborder li a {
   text-decoration: none;
 }
+
 .sectionborder li a:hover {
-    color: #FFBA08;
+  color: #FFBA08;
 }
-.sectionborder ul li{
-  text-align: justify;
-  text-justify: inter-word;
-}
-.sectionborder p{
+
+.sectionborder p,
+.sectionborder ul li {
   text-align: justify;
   text-justify: inter-word;
 }
 
-/* Flicker and Text Shadow Effect gathered from https://aleclownes.com/2017/02/01/crt-display.html */
-@keyframes flickerText { 
+
+/* =========================
+   GLITCH / FLICKER EFFECT
+========================= */
+/* Flicker and Text Shadow Effect
+   gathered from https://aleclownes.com/2017/02/01/crt-display.html */
+
+@keyframes flickerText {
   0% {
     opacity: 0.27861;
-    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5),
-                 -0.4389924193300864px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+     -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   5% {
     opacity: 0.34769;
-    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5),
-                 -2.7928974010788217px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5),
+     -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   10% {
     opacity: 0.23604;
-    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5),
-                 -0.02956275843481219px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5),
+     -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   15% {
     opacity: 0.90626;
-    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5),
-                 -0.40218538552878136px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5),
+     -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   20% {
     opacity: 0.18128;
-    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5),
-                 -3.4794037899852017px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5),
+     -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   25% {
     opacity: 0.83891;
-    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5),
-                 -1.6125630401149584px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5),
+     -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   30% {
     opacity: 0.65583;
-    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5),
-                 -0.7015590085143956px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5),
+     -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   35% {
     opacity: 0.67807;
-    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5),
-                 -3.896914047650351px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      3.896914047650351px 0 1px rgba(0, 30, 255, 0.5),
+     -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   40% {
     opacity: 0.26559;
-    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5),
-                 -3.870905614848819px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      3.870905614848819px 0 1px rgba(0, 30, 255, 0.5),
+     -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   45% {
     opacity: 0.84693;
-    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5),
-                 -2.231056963361899px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.231056963361899px 0 1px rgba(0, 30, 255, 0.5),
+     -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   50% {
     opacity: 0.96019;
-    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5),
-                 -0.08084290417898504px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5),
+     -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   55% {
     opacity: 0.08594;
-    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5),
-                 -2.3758461067427543px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5),
+     -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   60% {
     opacity: 0.20313;
-    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5),
-                 -2.202193051050636px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.202193051050636px 0 1px rgba(0, 30, 255, 0.5),
+     -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   65% {
     opacity: 0.71988;
-    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5),
-                 -2.8638780614874975px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5),
+     -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   70% {
     opacity: 0.53455;
-    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5),
-                 -0.48874025155497314px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5),
+     -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   75% {
     opacity: 0.37288;
-    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5),
-                 -1.8948491305757957px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5),
+     -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   80% {
     opacity: 0.71428;
-    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5),
-                 -0.0833037308038857px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5),
+     -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   85% {
     opacity: 0.70419;
-    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5),
-                 -0.09769827255241735px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5),
+     -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   90% {
     opacity: 0.7003;
-    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5),
-                 -3.443339761481782px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      3.443339761481782px 0 1px rgba(0, 30, 255, 0.5),
+     -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   95% {
     opacity: 0.36108;
-    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5),
-                 -2.1841838852799786px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5),
+     -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
+
   100% {
     opacity: 0.24387;
-    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5),
-                 -2.6208764473832513px 0 1px rgba(255,0,80,0.3),
-                 0 0 3px;
+    text-shadow:
+      2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5),
+     -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
   }
-} 
+}
+
+
 .glitch {
   animation: flickerText 2s infinite;
+}
+
+
+/* =========================
+   RESPONSIVE — TABLETS
+========================= */
+@media (max-width: 1024px) {
+
+  .Main_Title {
+    font-size: 3rem;
+  }
+
+  .hero {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .sidecontainer {
+    flex: 0 0 35%;
+  }
+
+  nav ul li a,
+  .sidebar ul li a {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE — MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .layout {
+    grid-template-areas: "body";
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .sidebar ul li a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .maincontainer,
+  .sidecontainer {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE — SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+
+  .Main_Title {
+    font-size: 2rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .sectionborder {
+    padding: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
 }
