@@ -34,6 +34,25 @@ body {
   animation: gridMove 1.5s linear infinite;
 }
 
+.UC {
+  background-image:
+  linear-gradient(#1d442c 2px, transparent 2px),
+  linear-gradient(to right, #1d442c 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-color: #042f0e;
+
+  animation: gridAltMove 1.5s linear infinite;
+}
+
+@keyframes gridAltMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 32px 32px;
+  }
+}
+
 @keyframes gridMove {
   from {
     background-position: 0 0;
@@ -174,12 +193,20 @@ details[open] .summary-dropdown::after {
 /* =========================
    HERO SECTION
 ========================= */
+.hero-container{
+  width: 70%;
+  margin: 10px auto;
+  background-color: #03071e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 3px solid #2e334c;
+}
+
 .hero {
   color: white;
-  width: 60%;
-  margin: auto;
+  width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   position: relative;
 
   flex-wrap: nowrap;
@@ -216,10 +243,20 @@ details[open] .summary-dropdown::after {
 /* =========================
    SECTION BORDERS
 ========================= */
+.MovingBG{
+  background-image:
+    linear-gradient(#12172B 2px, transparent 2px),
+    linear-gradient(to right, #12172B 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-color: #03071e;
+
+  animation: gridMove 1.5s linear infinite;
+}
+
 .main-sectionborder {
   padding: 10px 20px;
   border-radius: 5px;
-  border: 7px double #bebebe;
+  border: 7px double #ffffffbd;
   margin-bottom: 10px;
   text-align: justify;
 }
@@ -227,12 +264,12 @@ details[open] .summary-dropdown::after {
 .sectionborder {
   padding: 10px 20px;
   border-radius: 10px;
-  border: 5px double #222639;
+  border: 5px double #2e334c;
   margin-bottom: 10px;
 }
 
 .sectionborder:hover, .sectionborder-scrollable:hover {
-  border: 5px dashed #222639;
+  border: 5px solid #3a405f;
   margin-bottom: 10px;
 }
 
@@ -278,10 +315,6 @@ details[open] .summary-dropdown::after {
 .sectionborder p,
 .sectionborder ul li {
   text-align: left;
-}
-
-.solidbg{
-  background-color: #03071e;
 }
 
 /* Roadmap */
@@ -508,13 +541,18 @@ details[open] .summary-dropdown::after {
     font-size: 3rem;
   }
 
+  .hero-container{
+    width: 90%;
+  }
+
   .hero {
-    width: 80%;
+    display: block;
+    width: 100%;
     flex-direction: column;
   }
 
   .sidecontainer {
-    flex: 0 0 35%;
+    flex: 0 0 100%;
   }
 
   nav ul li a,
@@ -556,9 +594,14 @@ details[open] .summary-dropdown::after {
     align-items: center;
   }
 
+  .hero-container{
+    width: 95%;
+  }
+
   .hero {
-    width: 90%;
-    gap: 20px;
+    display: block;
+    width: 100%;
+    flex-direction: column;
   }
 
   .maincontainer,
@@ -573,12 +616,19 @@ details[open] .summary-dropdown::after {
 ========================= */
 @media (max-width: 480px) {
 
-  .Main_Title {
-    font-size: 2rem;
-  }
-
   body {
     font-size: 14px;
+  }
+
+  .hero-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+    flex-direction: column;
   }
 
   .sectionborder {
