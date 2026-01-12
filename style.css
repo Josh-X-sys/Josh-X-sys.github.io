@@ -9,7 +9,7 @@
   --ContentHighlightColor : #ffb936;
 }
 
-/* RESET & BASE STYLES */
+/*#region RESET & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +70,24 @@ a {
   color: var(--ContentColor);
 }
 
-/* ANIMIATION CLASSES */
+marquee {
+  color: var(--ContentHighlightColor);
+}
+
+.Main_Title {
+  font-family: 'Tourney', sans-serif;
+  font-size: 4rem;
+  color: #fe9441;
+  text-align: center;
+  transition: color 0.4s ease-in-out;
+}
+
+.Main_Title:hover {
+  color: #a528d6;
+}
+/* #endregion */
+
+/*#region ANIMIATION CLASSES */
 .UC {
   background-image:
   linear-gradient(#1d442c 2px, transparent 2px),
@@ -294,8 +311,9 @@ a {
     background-position: -32px -32px;
   }
 }
+/* #endregion */
 
-/* HEADER & NAVIGATION */
+/*#region ELEMENTS AND OVERLAY */
 .summary-dropdown {
   display: flex;            
   justify-content: space-between; 
@@ -313,29 +331,28 @@ details[open] .summary-dropdown::after {
 }
 
 .summary-dropdown:hover {
-  color: #ff7a14;
+  color: var(--ContentHighlightColor);
 }
 
-
-/* TITLES & TYPOGRAPHY */
-.Main_Title {
-  font-family: 'Tourney', sans-serif;
-  font-size: 4rem;
-  color: #fe9441;
-  text-align: center;
-  transition: color 0.4s ease-in-out;
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
 }
 
-.Main_Title:hover {
-  color: #a528d6;
+.overlay-padding{
+  padding: 50px 0px;
 }
+/* #endregion */
 
-
-/* HERO SECTION & CONTAINERS */
+/*#region HERO SECTION & CONTAINERS */
 .hero-container{
   width: 65%;
   margin: 10px auto;
   padding: 10px 10px;
+  border-radius: 10px;
   border: 9px groove #0dc487;
   color: #fe9441;
   background-color: #010e03;
@@ -479,8 +496,9 @@ details[open] .summary-dropdown::after {
     vertical-align: middle;
     margin-right: 3px;
 }
+/* #endregion */
 
-
+/*#region Breakpoints */
 /* TABLET */
 @media (max-width: 1024px) {
 
@@ -508,6 +526,14 @@ details[open] .summary-dropdown::after {
 
   .sectionborder-scrollable nav details ul li{
     width: 100%;
+  }
+
+  .overlay {
+    display: none;
+  }
+  
+  .overlay-padding{
+  padding: 0px;
   }
 }
 
@@ -581,3 +607,4 @@ details[open] .summary-dropdown::after {
     font-size: 13px;
   }
 }
+/* #endregion */
