@@ -319,6 +319,7 @@ marquee {
   justify-content: space-between; 
   align-items: center;
   cursor: pointer;
+  pointer-events: none;
 }
 
 .summary-dropdown::after{
