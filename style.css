@@ -34,6 +34,10 @@ body {
   animation: gridMove 1.5s linear infinite;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -63,6 +67,7 @@ h1, h2, p, li, marquee {
 h2, h3{
   font-family: 'Tourney', sans-serif;
   color: var(--ContentHighlightColor);
+  width: max-content;
 }
 
 a {
@@ -314,6 +319,14 @@ marquee {
 /* #endregion */
 
 /*#region ELEMENTS AND OVERLAY */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
 .summary-dropdown {
   display: flex;            
   justify-content: space-between; 
@@ -324,6 +337,13 @@ marquee {
 .summary-dropdown::after{
   content: "▼";         
   transition: transform 0.3s ease;
+}
+
+.h2link:hover{
+  cursor: pointer;
+
+  background-color: var(--ContentHighlightColor);
+  color: black;
 }
 
 details[open] .summary-dropdown::after {

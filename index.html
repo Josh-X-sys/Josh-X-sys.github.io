@@ -13,31 +13,34 @@
     <main>
     <div class="overlay-padding">
         
+    <!-- Header -->
     <section class="hero-container" style="padding-bottom: 0px;">
     <h1 class="Main_Title glitch">Josh-X-Sys</h1>
     <hr
-    style="height: 3; background-color: fe9441; margin-bottom: 10px;">
+    style="height: 3; margin-bottom: 10px;">
         <!-- Navigation Bar -->
         <div class="navbar">
             <nav style="display: flex;">
-                <a href="#about">About Me</a>
-                <a href="projects.html">Projects  <img class="icon-warning" src="./images/warning_globe.gif"></a>
-                <a>Journal<img class="icon-warning" src="./images/warning_globe.gif"></a>
-                <a>Website History<img class="icon-warning" src="./images/warning_globe.gif"></a>
-                <a>My Stuff<img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a onclick="switchPage('home');">Home</a>
+                        <a onclick="switchPage('aboutme');">About Me <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a onclick="switchPage('roadmap');">Road Map <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a onclick="switchPage('history');">Website History <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a onclick="switchPage('resources');">Resources <img class="icon-warning" src="./images/warning_globe.gif"></a>
             </nav>
         </div>
     </section>
 
+    <!-- Main Body -->
     <section class="hero-container">
         <section class="hero">
 
-        <section class="maincontainer">
+        <!-- Home Page -->
+        <section id="home" class="maincontainer page active">
             <!-- Welcome Div -->
             <div class="sectionborder ReverseBG">
             <h2>Welcome!</h2>
-            <p>This is where I show my personal information and other personal projects/interests, and things I otherwise enjoy.<br>
-            I am an Information Technology student learing the ropes and a person who is naturally curious.</p><br>
+            <p>This is where I show my personal information and other personal projects/interests, and things I otherwise enjoy.
+            I am an Information Technology student learning the ropes and a person who is naturally curious.</p>
             <h2>About this Website</h2>
             <p>The purpose of this site is more of a personal dumping ground of the amalgamation of my interests as well as a challenge to test my front-end skills as well creativity.</p>
             </div>
@@ -49,9 +52,22 @@
             </marquee>
             </div>
 
-            <!-- Roadmap -->
+            <!-- About Me -->
             <div class="sectionborder MovingBG">   
-                <h2>Roadmap</h2> <hr>
+                <h2 onclick="switchPage('aboutme');" class="h2link">About Me</h2>
+                <p>Facts About Me:</p> 
+                <ul class="margin-li">
+                <li>Born and raised in the Philippines</li>
+                <li>One of my first and current programming language is C# and currently challenging myself with web tech.</li>
+                <li>I have creative on and off hobbies such as crochet, music, and video editing.</li>
+                <li>I spend a majority of my time online through Discord.</li>
+                <li>I have experience in coding ASP.NET core MVCs web apps, APIs, and oftentimes 'full-stack'.</li>
+                </ul>
+            </div>
+
+            <!-- Roadmap -->
+            <div class="sectionborder ReverseBG">   
+                <h2  onclick="switchPage('roadmap');" class="h2link">Roadmap</h2> <hr>
                 <ul class="roadmap">
                     <li><span class="task">Finish Visits Display</span><span class="date">Finished</span></li>
                     <li><span class="task">Add Guestbook</span><span class="date">Finished</span></li>
@@ -62,21 +78,57 @@
                     <li><span class="task">Create Projects Pages</span><span class="date">Upcoming</span></li>
                 </ul>
             </div>
+        </section>
 
-            <!-- About Me -->
-            <div class="sectionborder ReverseBG">   
-                <h2 id="about">About Me</h2>
-                <p>Facts About Me:</p> 
-                <ul class="margin-li">
-                <li>Born and raised in the Philippines</li>
-                <li>One of my first and current programming language is C# and currently challenging myself with web tech.</li>
-                <li>I have creative on and off hobbies such as crochet, music, and video editing.</li>
-                <li>I spend a majority of my time online through Discord.</li>
-                <li>I have experience in coding ASP.NET core MVCs web apps, APIs, and oftentimes 'full-stack'.</li>
-                </ul>
+        <!-- About Me -->
+        <section id="aboutme" class="maincontainer page">
+            <div class="sectionborder ReverseBG">
+                <h2>
+                    About Me
+                </h2>
+                <p>
+                    About Me page
+                </p>
             </div>
         </section>
 
+        <!-- Road Map -->
+        <section id="roadmap" class="maincontainer page">
+            <div class="sectionborder ReverseBG">
+                <h2>
+                    Road Map
+                </h2>
+                <p>
+                    Road Map page
+                </p>
+            </div>
+        </section>
+
+        <!-- Website History -->
+        <section id="history" class="maincontainer page">
+            <div class="sectionborder ReverseBG">
+                <h2>
+                    History
+                </h2>
+                <p>
+                    Website History page
+                </p>
+            </div>
+        </section>
+
+        <!-- Resources Page -->
+        <section id="resources" class="maincontainer page">
+            <div class="sectionborder ReverseBG">
+                <h2>
+                    Resources
+                </h2>
+                <p>
+                    Resoruces page
+                </p>
+            </div>
+        </section>
+
+        <!-- Side Container -->
         <section class="sidecontainer">
             <!-- Links -->
             <div class="sectionborder MovingBG">
@@ -84,19 +136,17 @@
                 <h2>Links</h2>
                 <hr>
                 <nav>
-                    <h3>Socials</h3>
+                    <h3>Pages</h3>
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/jhesquivel/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://github.com/Josh-X-sys" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a><img class="icon-warning" src="./images/warning_globe.gif"></a></li>
                     </ul>
                 </nav>
                 <hr>
                 <nav>
-                    <h3>Resources</h3>
+                    <h3>Socials</h3>
                     <ul>
-                        <li>Placeholder#1</li>
-                        <li>Placeholder#2</li>
-                        <li>Placeholder#3</li>
+                        <li><a href="https://www.linkedin.com/in/jhesquivel/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/Josh-X-sys" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
                 </nav>
             </div>
@@ -146,11 +196,19 @@
 
             <!-- Updates -->
             <div class="sectionborder-scrollable ReverseBG">
-                <h2>Updates</h2>
+                <h2  onclick="switchPage('history');" class="h2link">Updates</h2>
                 <marquee style="background-color: black;" scrollamount = 6 onmouseover="this.stop();" onmouseout="this.start();">
-                    Last updated on January 11, 2026
+                    Last updated on January 15, 2026
                 </marquee>
                 <hr>
+                <p>
+                    <span># [January 15, 2026]</span>
+                    Revamped Navbar and Made a Single Page Layout for the Index Page [About Me, Road Map, Website History, Resources]
+                </p>
+                <p>
+                    <span># [January 14, 2026]</span>
+                    Changed Overlay Asset to Origial Image
+                </p>
                 <p>
                     <span># [January 12, 2026]</span>
                     Added Experimental Overlay Preset [Asset by eatkinola]
@@ -183,5 +241,12 @@
 
     </div>
 </main>
+<script>
+    function switchPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+</script>
 </body>
 </html>
