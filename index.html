@@ -21,11 +21,11 @@
         <!-- Navigation Bar -->
         <div class="navbar">
             <nav style="display: flex;">
-                        <a onclick="switchPage('home');">Home</a>
-                        <a onclick="switchPage('aboutme');">About Me <img class="icon-warning" src="./images/warning_globe.gif"></a>
-                        <a onclick="switchPage('roadmap');">Road Map <img class="icon-warning" src="./images/warning_globe.gif"></a>
-                        <a onclick="switchPage('history');">Website History <img class="icon-warning" src="./images/warning_globe.gif"></a>
-                        <a onclick="switchPage('resources');">Resources <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="1" title="Alt + 1" onclick="switchPage('home');">Home</a>
+                        <a accesskey="2" title="Alt + 2" onclick="switchPage('aboutme');">About Me <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="3" title="Alt + 3" onclick="switchPage('roadmap');">Road Map <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="4" title="Alt + 4" onclick="switchPage('history');">Website History <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="5" title="Alt + 5" onclick="switchPage('resources');">Resources <img class="icon-warning" src="./images/warning_globe.gif"></a>
             </nav>
         </div>
     </section>
@@ -123,8 +123,31 @@
                     Resources
                 </h2>
                 <p>
-                    Resoruces page
+                    This is where I dump any website that I find interesting, cool, or just helpful. I have a <a href="https://trello.com/b/qtavWQks/tools" target="_blank" rel="noopener noreferrer" class="styledlink">trello board</a> to compile and sort them by category and the ones displayed here are more for a quick link hub.
                 </p>
+            </div>
+            <hr style="margin: 10px;">
+            <div class="gallerycontainer">
+                <div class="sectionborder MovingBG">
+                    <h2><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer" class="styledlink">w3schools</a></h2>
+                    <p>w3 is a free online platform that teaches HTML, CSS, and many more and where I taught myself how to make this very website.</p>
+                </div>
+                <div class="sectionborder MovingBG">
+                    <h2><a href="https://www.photopea.com/" target="_blank" rel="noopener noreferrer" class="styledlink">Photopea</a></h2>
+                    <p>Photopea is a free online alternative to photoshop where I made my assets to edit and create images from scratch.</p>
+                </div>
+                <div class="sectionborder MovingBG">
+                    <h2><a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener noreferrer" class="styledlink">Davinci Resolve</a></h2>
+                    <p>A free video editing software alternative to adobe premiere and my go to video editing software.</p>
+                </div>
+                <div class="sectionborder MovingBG">
+                    <h2><a href="https://fadr.com/stems" target="_blank" rel="noopener noreferrer" class="styledlink">Fadr</a></h2>
+                    <p>Split audio into 4 different tracks for free and download as files for any use case.</p>
+                </div>
+                <div class="sectionborder MovingBG">
+                    <h2><a href="https://openguessr.com/" target="_blank" rel="noopener noreferrer" class="styledlink">Openguesr</a></h2>
+                    <p>Too broke to purchase a Geoguesr account so I just play this free alternative.</p>
+                </div>
             </div>
         </section>
 
@@ -198,7 +221,7 @@
             <div class="sectionborder-scrollable ReverseBG">
                 <h2  onclick="switchPage('history');" class="h2link">Updates</h2>
                 <marquee style="background-color: black;" scrollamount = 6 onmouseover="this.stop();" onmouseout="this.start();">
-                    Last updated on January 15, 2026
+                    Last updated on January 17, 2026
                 </marquee>
                 <hr>
                 <p>
