@@ -318,11 +318,24 @@
       document.getElementById(pageId).classList.add('active');
     }
     window.addEventListener('load', function () {
-        var s = document.createElement('script');
-        s.src = '//counter1.fc2.com/views.php?id=40682023&main=1';
-        s.async = true;
-        document.getElementById('fc2-counter').appendChild(s);
-  });
+    var container = document.getElementById('fc2-counter');
+
+    // Current
+    var viewersScript = document.createElement('script');
+    viewersScript.src = '//counter1.fc2.com/views.php?id=40682023&main=1';
+    viewersScript.async = true;
+    container.appendChild(viewersScript);
+
+    // Total 
+    var counterScript = document.createElement('script');
+    counterScript.src = '//counter1.fc2.com/counter.php?id=40682023&main=1';
+    counterScript.async = true;
+    container.appendChild(counterScript);
+});
 </script>
+<noscript>
+    <img src="//counter1.fc2.com/counter_now.php?id=40682023&main=1" alt="Current Viewers">
+    <img src="//counter1.fc2.com/counter_img.php?id=40682023&main=1" alt="Total Views">
+</noscript>
 </body>
 </html>
