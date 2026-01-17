@@ -374,6 +374,7 @@ details[open] .summary-dropdown::after {
 }
 
 .styledlink:hover{
+  cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: double;
 }
@@ -426,12 +427,19 @@ details[open] .summary-dropdown::after {
   overflow-y: auto;
 }
 
-.sectionborder nav ul {
-  flex-direction: column;
+.sectionborder-scrollable p {
+  margin-bottom: 5px;
+  text-align: left;
 }
 
-.margin-li{
-  margin-left: 20px;
+.sectionborder-scrollable span {
+    display: block;
+    font-weight: bold;
+    color: var(--ContentHighlightColor);
+}
+
+.sectionborder nav ul {
+  flex-direction: column;
 }
 
 .sectionborder li a:hover{
@@ -439,23 +447,19 @@ details[open] .summary-dropdown::after {
   color: black;
 }
 
+.margin-li{
+  margin-left: 20px;
+}
+
 .sectionborder-scrollable::-webkit-scrollbar {
     display: none;
 }
 
-.sectionborder-scrollable p {
-  margin-bottom: 5px;
-}
-
-.sectionborder-scrollable p span {
-  display: block;
-  font-style: italic;
-}
-
-.sectionborder:hover, .sectionborder-scrollable:hover{
+.sectionborder:hover, .sectionborder-scrollable:hover, .KanbanBoard div:hover{
   border: 3px inset var(--ContentColor);
 }
 
+/* Gallery */
 .gallerycontainer{
   display: flex;
   flex-wrap: wrap;
@@ -469,8 +473,37 @@ details[open] .summary-dropdown::after {
   max-width: 270px;
 }
 
-.gallerycontainer div p{
-  text-align: center;
+.gallerycontainer div p, .gallerycontainer .sectionborder h2{
+  text-align: center; 
+  width: auto;
+}
+
+.gallerycontainer div:nth-child(odd), .KanbanBoard div:nth-child(odd){
+  background-image:
+    linear-gradient(#302306dc 2px, transparent 2px),
+    linear-gradient(to right, #302306dc 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-color: #181204dc;
+
+  animation: gridMove 1.5s linear infinite;
+}
+
+.gallerycontainer div:nth-child(even), .KanbanBoard div:nth-child(even){
+  background-image:
+    linear-gradient(#181204dc 2px, transparent 2px),
+    linear-gradient(to right, #181204dc 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-color: #302306;
+
+  animation: gridAltMove 1.5s linear infinite;
+}
+
+/* KanbanBoard */
+.KanbanBoard div{
+  width: 100%;
+  border: 3px outset var(--ContentColor);
+  padding: 10px;
+  margin-top: 10px;
 }
 
 /* Roadmap */
@@ -533,6 +566,7 @@ details[open] .summary-dropdown::after {
 }
 
 .navbar a:hover {
+  cursor: pointer;
   border: 3px inset #a528d6;
   color: #a528d6;
   background-color: #240a2e;
@@ -582,7 +616,7 @@ details[open] .summary-dropdown::after {
   }
   
   .overlay-padding{
-  padding: 0px;
+    padding: 0px;
   }
 }
 
