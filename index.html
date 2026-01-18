@@ -24,7 +24,7 @@
                         <a accesskey="1" title="Alt + 1" onclick="switchPage('home');">Home</a>
                         <a accesskey="2" title="Alt + 2" onclick="switchPage('aboutme');">About Me <img class="icon-warning" src="./images/warning_globe.gif"></a>
                         <a accesskey="3" title="Alt + 3" onclick="switchPage('roadmap');">Road Map</a>
-                        <a accesskey="4" title="Alt + 4" onclick="switchPage('history');">Website History <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="4" title="Alt + 4" onclick="switchPage('history');">Website History</a>
                         <a accesskey="5" title="Alt + 5" onclick="switchPage('resources');">Resources</a>
             </nav>
         </div>
@@ -38,7 +38,7 @@
         <section id="home" class="maincontainer page active">
             <!-- Welcome Div -->
             <div class="sectionborder ReverseBG">
-            <h2>Welcome!</h2>
+            <h1>Welcome!</h1>
             <p>This is where I show my personal information and other personal projects/interests, and things I otherwise enjoy.
             I am an Information Technology student learning the ropes and a person who is naturally curious.</p>
             <h2>About this Website</h2>
@@ -48,7 +48,7 @@
             <!-- Marquee -->
             <div>
             <marquee scrollamount = 12 onmouseover="this.stop();" onmouseout="this.start();">
-                <img class="icon-warning" src="./images/warning_globe.gif"> This website is still currently under development and is still in rough shape.<img class="icon-warning" src="./images/warning_globe.gif">Improvements will come as I develop better front-end coding skills :p. <img class="icon-warning" src="./images/warning_globe.gif">
+                <img class="icon-warning" src="./images/warning_globe.gif"> It's all coming together now.<img class="icon-warning" src="./images/warning_globe.gif"> Improvements has and will arrive as I get the hang of coding front-end. Still needs work. <img class="icon-warning" src="./images/warning_globe.gif">
             </marquee>
             </div>
 
@@ -86,9 +86,9 @@
         <!-- About Me -->
         <section id="aboutme" class="maincontainer page">
             <div class="sectionborder ReverseBG">
-                <h2>
+                <h1>
                     About Me
-                </h2>
+                </h1>
                 <p>
                     About Me page
                 </p>
@@ -98,9 +98,9 @@
         <!-- Road Map -->
         <section id="roadmap" class="maincontainer page">
             <div class="sectionborder ReverseBG">
-                <h2>
+                <h1>
                     Road Map
-                </h2>
+                </h1>
                 <p>
                     This is not completely accurate to my intentions of the website since I'm more spontaneous with my ideas rather than a completely planned out structure. This serves to give out my clearer intentions with the directions I want to take this website.
                 </p>
@@ -146,21 +146,50 @@
         <!-- Website History -->
         <section id="history" class="maincontainer page">
             <div class="sectionborder ReverseBG">
-                <h2>
+                <h1>
                     History
-                </h2>
+                </h1>
                 <p>
-                    Website History page
+                    This display both major and minor changes made to the website. This will show the evolution of my website as I further fine-tune my front-end skills and creativity.
                 </p>
             </div>
+            <section class="KanbanBoard">
+                <div>
+                    <h2>January 2026</h2>
+                    <hr>
+
+                    <h3>2nd - 7th</h3>
+                    <p>The first initial design had a dark blue but I felt it lack personality.
+                    It was inspired by other sites I've seen on nekoweb which gave the idea to
+                    include the live counter and other small noteable features such as :
+                    <u>update box, visitor counters, guestbook, and the navbar.</u></p>
+                    <img src="./history/jan-7-2026.webp" class="sectionborder" style="padding: 0px; margin-top: 5px;" loading="lazy">
+                    <hr>
+
+                    <h3>11th - 17th</h3>
+                    <p>After being satisfied with the overall structure of the website,
+                    I decided to completely <u>change the color palette</u> to orange and cyan
+                    and go for a retroesque style. During this time frame I've also <u>added
+                    an overlay</u> which fitted nicely with my UI which later replaced by my
+                    <a href="https://github.com/Josh-X-sys/Josh-X-sys.github.io/commit/14492f997a4f51f312f238d0bf33ac0ea29b2b4f" target="_blank" rel="noopener noreferrer">original work</a> using photopea.
+                    I also finally <u>made a one page setup with the navbar</u> being able to switch
+                    to pages as well as changing the navbar content itself. Finally on the 17th
+                    content for resources and roadmap were added.</p>
+                    <img src="./history/jan-15-2026.webp" class="sectionborder" style="padding: 0px; margin-top: 5px;" loading="lazy">
+                    <hr>
+
+                    <h3>18th - Current</h3>
+                    <p>Finally added the content and images on the website to help develop this history page.</p>
+                </div>
+            </section>
         </section>
 
         <!-- Resources Page -->
         <section id="resources" class="maincontainer page">
             <div class="sectionborder ReverseBG">
-                <h2>
+                <h1>
                     Resources
-                </h2>
+                </h1>
                 <p>
                     This is where I dump any website that I find interesting, cool, or just helpful. I have a <a href="https://trello.com/b/qtavWQks/tools" target="_blank" rel="noopener noreferrer" class="styledlink">trello board</a> to compile and sort them by category and the ones displayed here are more for a quick link hub.
                 </p>
@@ -267,6 +296,10 @@
                     Last updated on January 17, 2026
                 </marquee>
                 <hr>
+                <p>
+                    <span># [January 18, 2026]</span>
+                    Added content for <a onclick="switchPage('history')" class="styledlink">History</a> Page
+                </p>
                 <p>
                     <span># [January 17, 2026]</span>
                     Added content for <a onclick="switchPage('resources')" class="styledlink">Resources</a> and <a onclick="switchPage('roadmap')" class="styledlink">Road Map</a> Page

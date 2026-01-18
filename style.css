@@ -65,7 +65,7 @@ h1, h2, p, li, marquee {
   text-align:justify;
 }
 
-h2, h3{
+h1, h2, h3{
   font-family: 'Tourney', sans-serif;
   color: var(--ContentHighlightColor);
   width: max-content;
