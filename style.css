@@ -60,12 +60,12 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-h1, h2, p, li, marquee {
+h2, p, li, marquee {
   cursor: default;
   text-align:justify;
 }
 
-h1, h2, h3{
+h1 ,h2, h3{
   font-family: 'Tourney', sans-serif;
   color: var(--ContentHighlightColor);
   width: max-content;
@@ -81,10 +81,9 @@ marquee {
 }
 
 .Main_Title {
-  font-family: 'Tourney', sans-serif;
   font-size: 4rem;
-  color: #fe9441;
-  text-align: center;
+  margin: auto;
+  color: var(--ContentColor);
   transition: color 0.4s ease-in-out;
 }
 
