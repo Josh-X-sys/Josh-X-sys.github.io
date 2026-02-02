@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josh-X-Sys</title>
+    <title>X Home Page</title>
     <link rel="icon" href="images/icon.webp">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,13 +16,11 @@
     <!-- Header -->
     <section class="hero-container" style="padding-bottom: 0px;">
     <h1 class="Main_Title glitch">Josh-X-Sys</h1>
-    <hr
-    style="height: 3; margin-bottom: 10px;">
         <!-- Navigation Bar -->
         <div class="navbar">
             <nav style="display: flex;">
                         <a accesskey="1" title="Alt + 1" onclick="switchPage('home');">Home</a>
-                        <a accesskey="2" title="Alt + 2" onclick="switchPage('aboutme');">About Me <img class="icon-warning" src="./images/warning_globe.gif"></a>
+                        <a accesskey="2" title="Alt + 2" onclick="switchPage('aboutme');">About Me</a>
                         <a accesskey="3" title="Alt + 3" onclick="switchPage('roadmap');">Road Map</a>
                         <a accesskey="4" title="Alt + 4" onclick="switchPage('history');">Website History</a>
                         <a accesskey="5" title="Alt + 5" onclick="switchPage('resources');">Resources</a>
@@ -42,13 +40,13 @@
             <p>This is where I show my personal information and other personal projects/interests, and things I otherwise enjoy.
             I am an Information Technology student learning the ropes and a person who is naturally curious.</p>
             <h2>About this Website</h2>
-            <p>The purpose of this site is more of a personal dumping ground of the amalgamation of my interests as well as a challenge to test my front-end skills as well as my creativity.</p>
+            <p>The purpose of this site is more of a personal dumping ground of the amalgamation of my interests as well as a challenge to test my front-end skills as well as my creativity. This website was made in VSC using basic web tech with no framrworks.</p>
             </div>
 
             <!-- Marquee -->
             <div>
             <marquee scrollamount = 12 onmouseover="this.stop();" onmouseout="this.start();">
-                <img class="icon-warning" src="./images/warning_globe.gif"> It's all coming together now.<img class="icon-warning" src="./images/warning_globe.gif"> Improvements has and will arrive as I get the hang of coding front-end. Still needs work. <img class="icon-warning" src="./images/warning_globe.gif">
+                <img class="icon-warning" src="./images/warning_globe.gif"> It's all coming together but still needs work.<img class="icon-warning" src="./images/warning_globe.gif"> More improvements will arrive as I get the hang of coding front-end and have more free time.<img class="icon-warning" src="./images/warning_globe.gif">
             </marquee>
             </div>
 
@@ -57,7 +55,7 @@
                 <h2 onclick="switchPage('aboutme');" class="h2link">About Me</h2>
                 <p>Facts About Me:</p> 
                 <ul class="margin-li">
-                <li>Born and raised in the Philippines</li>
+                <li>Born and raised in the Philippines.</li>
                 <li>One of my first and current programming language is C# and currently challenging myself with web tech.</li>
                 <li>I have creative on and off hobbies such as crochet, music, and video editing.</li>
                 <li>I spend a majority of my time online through Discord.</li>
@@ -90,8 +88,42 @@
                     About Me
                 </h2>
                 <p>
-                    About Me page
+                    This is where I will display personal information I feel comfortable sharing.
                 </p>
+            </div>
+            <div class="sectionborder MovingBG">
+                <h2>Facts About Me and Education:</h2> 
+                <ul class="margin-li">
+                <li>Born and raised in the Philippines.</li>
+                <li>Graduating I.T. Student of 2026.</li>
+                <li>I've mostly learned MVC in ASP.NET and trying out pure web tech for a change.</li>
+                </ul>
+                <h2>Website and My Projects:</h2> 
+                <ul class="margin-li">
+                <li>This website is my first front end project and wont be the last.</li>
+                <li>I have creative on and off hobbies such as: crochet, music, video editing, and I suppose creatively developing websites for fun.</li>
+                </ul>
+                <h2>Lifestyle:</h2> 
+                <ul class="margin-li">
+                <li>I spend a majority of my time online through Discord (when I'm not busy).</li>
+                <li>I dont travel often since I dont have the time, but I enjoy commuting rather than traveling by private means.</li>
+                <li>Im not particularly active in social media either. I dont tend to post or share much of my work/ interests which makes this website the only exception.</li>
+                </ul>
+            </div>
+            
+            <div class="gallerycontainer">
+                <div class="sectionborder">
+                    <h2>Crochet</h2>
+                    <p>I haven't had the time to crochet either, so it'll take time.</p>
+                </div>
+                <div class="sectionborder">
+                    <h2>Future Website Projects</h2>
+                    <p>Once I make more front-end 'mockups' such as this one, I'll paste them here.</p>
+                </div>
+                <div class="sectionborder">
+                    <h2>Music</h2>
+                    <p>I dont really compose music. More on covering songs I like.</p>
+                </div>
             </div>
         </section>
 
@@ -107,37 +139,39 @@
             </div>
             <div class="KanbanBoard">
                 <div>
-                    <h2>Upcoming</h2>
+                    <h2>Current</h2>
                     <hr>
                     <ul class="roadmap">
-                    <li><span class="task">Add Graphical Elements (Images)</span><span class="date">Upcoming</span></li>
-                    <li><span class="task">Create Projects Pages</span><span class="date">Upcoming</span></li>
-                    <li><span class="task">Create Interests Pages</span><span class="date">Upcoming</span></li>
+                    <li><span class="task">Create Concepts Pages (Other WebDev Projects)</span><span class="date">Current</span></li>
                     </ul>
                 </div>
                 <div>
-                    <h2>Finished</h2>
+                    <h2>Upcoming</h2>
                     <hr>
                     <ul class="roadmap">
-                    <li><span class="task">Finish Visits Display</span><span class="date">Finished</span></li>
-                    <li><span class="task">Add Guestbook</span><span class="date">Finished</span></li>
-                    <li><span class="task">Better Homepage Content & Layout</span><span class="date">Finished</span></li>
+                    <li><span class="task">Create Projects Pages (Programming Projects like MVC)</span><span class="date">Upcoming</span></li>
+                    <li><span class="task">Create Interests Pages (Crochet/Music/Video/Games)</span><span class="date">Upcoming</span></li>
+                    <li><span class="task">Add Custom Cursors</span><span class="date">Upcoming</span></li>
+                    <li><span class="task">Add Graphical Elements (Images)</span><span class="date">Upcoming</span></li>
                     </ul>
                 </div>
                 <div>
                     <h2>Soon</h2>
                     <hr>
                     <ul class="roadmap">
-                    <li><span class="task">Create About Me Tab</span><span class="date">Soon</span></li>
-                    <li><span class="task">Add Custom Cursors</span><span class="date">Soon</span></li>
+                    <li><span class="task">Dark Mode Alt Color Theme</span><span class="date">Upcoming</span></li>
                     </ul>
                 </div>
                 <div>
-                    <h2>Current</h2>
+                    <h2>Finished</h2>
                     <hr>
                     <ul class="roadmap">
-                    <li><span class="task">Create Road Map Tab</span><span class="date">Current</span></li>
-                    <li><span class="task">Create Website History Tab</span><span class="date">Current</span></li>
+                    <li><span class="task">Create About Me Tab</span><span class="date">Finished</span></li>
+                    <li><span class="task">Create Road Map Tab</span><span class="date">Finished</span></li>
+                    <li><span class="task">Create Website History Tab</span><span class="date">Finished</span></li>
+                    <li><span class="task">Finish Visits Display</span><span class="date">Finished</span></li>
+                    <li><span class="task">Add Guestbook</span><span class="date">Finished</span></li>
+                    <li><span class="task">Better Homepage Content & Layout</span><span class="date">Finished</span></li>
                     </ul>
                 </div>
             </div>
@@ -166,20 +200,24 @@
                     <img src="./history/jan-7-2026.webp" class="sectionborder" style="padding: 0px; margin-top: 5px;" loading="lazy">
                     <hr>
 
-                    <h3>11th - 17th</h3>
+                    <h3>11th - 18th</h3>
                     <p>After being satisfied with the overall structure of the website,
                     I decided to completely <u>change the color palette</u> to orange and cyan
                     and go for a retroesque style. During this time frame I've also <u>added
                     an overlay</u> which fitted nicely with my UI which later replaced by my
                     <a href="https://github.com/Josh-X-sys/Josh-X-sys.github.io/commit/14492f997a4f51f312f238d0bf33ac0ea29b2b4f" target="_blank" rel="noopener noreferrer">original work</a> using photopea.
                     I also finally <u>made a one page setup with the navbar</u> being able to switch
-                    to pages as well as changing the navbar content itself. Finally on the 17th
-                    content for resources and roadmap were added.</p>
+                    to pages as well as changing the navbar content itself. On the 17th
+                    content for resources and roadmap were added. I also added the content and images on the website to help develop this history page on the 18th.</p>
                     <img src="./history/jan-15-2026.webp" class="sectionborder" style="padding: 0px; margin-top: 5px;" loading="lazy">
                     <hr>
+                </div>
+                <div>
+                    <h2>February 2026</h2>
+                    <hr>
 
-                    <h3>18th - Current</h3>
-                    <p>Finally added the content and images on the website to help develop this history page.</p>
+                    <h3>2nd - Current</h3>
+                    <p>Finally added content to the <a onclick="switchPage('aboutme')" class="styledlink">About Me</a> Tab.</p>
                 </div>
             </section>
         </section>
@@ -230,7 +268,7 @@
                     <ul>
                         <li><a>Interests<img class="icon-warning" src="./images/warning_globe.gif"></a></li>
                         <li><a>Projects<img class="icon-warning" src="./images/warning_globe.gif"></a></li>
-                        <li><a>Concepts<img class="icon-warning" src="./images/warning_globe.gif"></a></li>
+                        <li><a href="./concepts.html">Concepts<img class="icon-warning" src="./images/warning_globe.gif"></a></li>
                     </ul>
                 </nav>
                 <hr>
@@ -293,9 +331,13 @@
             <div class="sectionborder-scrollable ReverseBG">
                 <h2  onclick="switchPage('history');" class="h2link">Updates</h2>
                 <marquee style="background-color: black;" scrollamount = 6 onmouseover="this.stop();" onmouseout="this.start();">
-                    Last updated on January 17, 2026
+                    Last updated on February 2, 2026
                 </marquee>
                 <hr>
+                <p>
+                    <span># [February 2, 2026]</span>
+                    Added content for <a onclick="switchPage('aboutme')" class="styledlink">About Me</a> Page
+                </p>
                 <p>
                     <span># [January 18, 2026]</span>
                     Added content for <a onclick="switchPage('history')" class="styledlink">History</a> Page
